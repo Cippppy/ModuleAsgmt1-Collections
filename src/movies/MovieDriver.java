@@ -18,8 +18,18 @@ public class MovieDriver {
 	 * which it will then use to make a new Movie and add it into the HashMap movies.
 	 */
 	private static void populateMovies() {
-		System.out.println("Creating movies");
+		Scanner myObj = new Scanner(System.in);
+		System.out.println("Creating movies\n");
 		// TODO add your code here.
+		System.out.print("Enter title of movie 1: ");
+		String name1 = myObj.nextLine();
+		System.out.print("\nEnter length of movie 1: ");
+		int length1 = myObj.nextInt();
+		System.out.print("\nEnter release date of movie 1: ");
+		String date1 = myObj.nextLine();
+
+		Movie movie1 = new Movie(name1, date1);
+		movies.put(length1, movie1);
 	}
 	
 	/**
